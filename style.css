@@ -1,4 +1,30 @@
-body{margin: 0;padding: 0;color: #404040;font-size: 16px}
+body{margin: 0;padding: 0;color: #404040;font-size: 16px;font-family: 'Open Sans', sans-serif;font-weight: 400;}
+p {
+    color: #404040;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+}
+h1, .h1, .title h1 {
+    color: #404040;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+h2, .h2, h2 a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/*Own csss */
+
+h2.head-text{
+	font-size: 32px;
+	font-weight: 700;
+}
 .banner{
 	overflow: hidden;
 	position: relative;
@@ -9,7 +35,7 @@ body{margin: 0;padding: 0;color: #404040;font-size: 16px}
 	background-size: cover;
 	background-position: center;
 	width: 100%;
-	height: 580px;
+	height: 574px;
 	align-items: flex-center;
 	display: -webkit-flex;
 	display: flex;
@@ -22,13 +48,19 @@ body{margin: 0;padding: 0;color: #404040;font-size: 16px}
 	float: left;
 	width: calc(100% / 2 - 1px);
 	text-align: center;
-	color: #fff;
+	font-family: 'Open Sans', sans-serif;
 }
-.inner-content h1{
+.inner-content h2.head-text{
 	margin-top: 0;
+	color: #fff;
+	z-index: 2;
+	position: relative;
 }
 .inner-content p{
-	font-size: 20px;
+	font-size: 18px;
+	color: #fff;
+	z-index: 2;
+   position: relative;
 }
 .inner-content p span{
 	display: block;
@@ -36,15 +68,17 @@ body{margin: 0;padding: 0;color: #404040;font-size: 16px}
 }
 .inner-content a{
 	color: #fff;
-	font-size: 18px;
-	border: 5px solid #fff;
-	padding: 10px 18px;
+	font-size: 13px;
+	border: 3px solid #fff;
+	padding: 10px 23px;
 	display: inline-block;
+	position: relative;
+	z-index: 2;
 }
 .inner-right{
 	margin-left: 66px;
 	margin-right: 60px;
-	padding: 60px 0;
+	padding: 60px 6px;
     background: transparent;
 	/*transform: skewX(-10deg);*/
 	/*clip-path: polygon(0% 100%, 100% 100%, 0% 0%);*/
@@ -58,7 +92,7 @@ body{margin: 0;padding: 0;color: #404040;font-size: 16px}
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -63px;
+  left: -51px;
   display: block;
   width: 126px;
   background: transparent;
@@ -67,8 +101,8 @@ body{margin: 0;padding: 0;color: #404040;font-size: 16px}
   transform: skew(-19deg);
 }
 .inner-left{
-   margin-right: 60px;
-   padding: 60px 0;
+   margin-right: 58px;
+   padding: 60px 6px;
    background: transparent;
    margin-left: 60px;
 }
@@ -78,7 +112,7 @@ body{margin: 0;padding: 0;color: #404040;font-size: 16px}
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -63px;
+  right: -71px;
   display: block;
   width: 126px;
   background: transparent;
@@ -88,10 +122,103 @@ body{margin: 0;padding: 0;color: #404040;font-size: 16px}
 }
 .inner-right:hover, .right-skew:hover:before, .inner-left:hover, .left-skew:hover:after {
 	background: #fff;
+}
+.inner-left:hover p, .inner-left:hover h2.head-text, .inner-right:hover p, .inner-right:hover h2.head-text{
 	color: #404040;
 }
 .inner-right:hover a, .inner-left:hover a{
 	background: #404040;
 	border-color: #404040;
 }
+.counting-container{
+	background-color:#ececec;
+	padding: 76px 0; 
+}
+.counting-box{
+	width: calc(100% / 3);
+	text-align: center;
+	float: left;
+}
+.counting-box h2{
+	font-size: 52px;
+	font-weight: 700;
+	margin-top: 0;
+	color: #404040;
+	text-transform: lowercase;
+}
+.section-inner{
+	padding: 50px 0;
+}
+.section-inner h2.head-text{
+	color: #eb2d2e;
+}
+.section-inner h3{
+	font-size: 24px;
+	color: #404040;
+	font-weight: 400;
+}
+.section-inner h2{
+	color: #eb2d2e;
+	padding: 25px 0 10px;
+}
 
+/*media query goes here*/
+
+@media only screen and (max-width: 1199px) {
+    .right-skew:before{
+    		left: -60px;
+    	}
+    .inner-right{
+    	margin-left: 75px;
+    }
+    .inner-left{
+       margin-right: 45px;
+    }
+    .left-skew:after{
+    	right: -64px;
+    }   
+}
+@media only screen and (max-width: 991px) {
+	.inner-left{
+		margin-left: 15px;
+	}
+	.inner-right{
+		margin-right: 15px;
+		margin-left: 82px;
+	}
+	.right-skew:before {
+	    left: -68px;
+	    width: 135px;
+	}
+}
+@media only screen and (max-width: 767px){
+		.inner-content{
+			width: 100%;
+			padding: 20px 0;
+		}
+		.inner-left {
+		    margin-right: 118px;
+		    padding: 25px 10px;
+		}
+		.inner-right {
+			padding: 25px 10px;
+			margin-left: 123px;
+		}
+		.counting-container {
+		    padding: 50px 0 25px;
+		}
+		.counting-box {
+		    width: 100%;
+		    float: none;
+		    padding-bottom: 25px;
+		}
+}
+@media only screen and (max-width: 480px){
+	.inner-left, .inner-right {
+	    margin: 0 10px;
+	    padding: 18px;
+	}
+	.left-skew:after,.right-skew:before{
+		display: none;
+	}
+}

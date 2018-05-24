@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Realnext</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,14 +14,14 @@
 		<div class="banner-content">
 			<div class="inner-content">
 				<div class="inner-left left-skew">
-					<h1>MAKELAARS</h1>
+					<h2 class="head-text">MAKELAARS</h2>
 					<p>USP regel voor makelaars die verteld <span>waarom RealNext de juist keuze is.</span></p>
 					<a href="#">VOOR MAKELAARS</a>
 				</div>
 			</div>
 			<div class="inner-content">
 				<div class="inner-right right-skew">
-					<h1>VASTGOED EIGENAREN</h1>
+					<h2 class="head-text">VASTGOED EIGENAREN</h2>
 					<p>UZet uw vastgoed op RealNext. <span>Het unieke platform voor bedrijfsontroerend goed.</span></p>
 					<a href="#">VOOR VASTGOED EIGENAREN</a>
 				</div>
@@ -28,7 +29,57 @@
 		</div>
 	</div>
 </section>
+<div class="counting-container">
+	<div class="container">
+		<div class="counting-box" id="encounter">
+			<h2><span class="count-this">4000</span>+</h2>
+			<p>objecten te koop</p>
+		</div>
+		<div class="counting-box" id="battles">
+			<h2><span class="count-this">4000</span> mil</h2>
+			<p>bezoeken per maand</p>
+		</div>
+		<div class="counting-box" id="locations">
+			<h2><span class="count-this">40</span>+</h2>
+			<p>aangesloten makelaars</p>
+		</div>
+	</div>
+</div>
+<section class="section-inner">
+	<div class="container">
+		<h2 class="head-text">Voor vastgoed eigenaren</h2>
+		<h3>Intro met een elevator pitch voor RealNext. Het betekent exposure op het grootste vastgoedplatform van Nederland.</h3>
+		<div class="row">
+			<div class="col-sm-6">
+				<h2>Waarom realnext</h2>
+				<p>Funda is sinds 2001 hét vastgoedplatform van makelaars voor consumenten en ondernemers. In ruim 15 jaar tijd groeide funda uit van een kleine website tot gemeengoed. Funda loopt voorop met de nieuwste toepassingen van internet bij het zoeken naar en vinden van vastgoed. Wij doorgronden de behoeften van de internetgebruiker en bieden de slimste mogelijkheden voor makelaars en adverteerders. Op die manier boeken we samen het beste resultaat. In de veranderende wereld waarborgen we de positie van de makelaar en dragen we bij aan zijn dagelijks succes. Zo is funda de partner van de makelaar.</p>
+			</div>
+			<div class="col-sm-6"></div>
+		</div>
+	</div>
+</section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	// Always test to check for a connection!
+	// console.log("Testing - JavaScript file has been linked correctly!");
+
+	// Find the 'count this' class on the page and animate it
+	$('.count-this').each(function () {
+
+		// Start the counting from a specified number - in this case, 0!
+	    $(this).prop('Counter',0).animate({
+	        Counter: $(this).text()
+	    }, {
+	    	// Speed of counter in ms, default animation style
+	        duration: 2000,
+	        easing: 'swing',
+	        step: function (now) {
+	        	// Round up the number
+	            $(this).text(Math.ceil(now));
+	        }
+	    });
+	});
+</script>
 </body>
 </html>
